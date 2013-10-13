@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.AppName = System.Configuration.ConfigurationManager.AppSettings["AppName"] ?? "Application Name";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SPA Demo</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink((string)ViewBag.AppName, "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-right:25px">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Websites &nbsp;<b class="icon-hand-down"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" href="http://blog.PBDesk.com/">blog.PBDesk.com <i class="icon-share-alt"></i></a></li>
+                            <li><a target="_blank" href="https://www.PBDesk.com/">www.PBDesk.com <i class="icon-share-alt"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow Me &nbsp;<b class="icon-hand-down"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">About Me</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://twitter.com/PBDesk" target="_blank" title="Twitter @("PBDesk")"><i class="icon-twitter icon-large"></i>&nbsp;&nbsp; Twitter </a></li>
+                            <li><a href="http://www.facebook.com/Go.PBDesk" target="_blank" title="Facebook"><i class="icon-facebook icon-large"></i>&nbsp;&nbsp; Facebook</a></li>
+                            <li><a href="https://plus.google.com/104802217330869674552" target="_blank" title="Google+"><i class="icon-google-plus icon-large"></i>&nbsp;&nbsp; Google+ </a></li>
+                            <li><a href="http://www.linkedin.com/in/pinalbhatt" target="_blank" title="LinkedIN"><i class="icon-linkedin icon-large"></i>&nbsp;&nbsp; LinkedIN </a></li>
+                            <li><a href="https://github.com/PBDesk" target="_blank" title="Github"><i class="icon-github icon-large"></i>&nbsp;&nbsp; Github  </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /.container -->
+    </div>
+    
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9">
+                <p class="pull-right visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+                </p>
+                @RenderBody()
+            </div>
+            @RenderSection("Sidebar", false)
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p><b>@ViewBag.AppName</b> | From the desk of Pinal Bhatt</p>
+            <p>Concept perceived, designed and developed by <a href="https://plus.google.com/116495447274977757345?rel=author"><b>Pinal Bhatt</b></a>.</p>
+            <p>My Website: <b><a target="_blank" href="http://www.PBDesk.com">PBDesk.com</a> - </b> From the desk of Pinal Bhatt.</p>
+            <p>My Blog: <b><a target="_blank" href="http://blog.PBDesk.com">Pinal Bhatt's Blog</a> - </b> Learning endeavor for ever....</p>
+            <p>&nbsp;</p>
+            <p>Follow Me At</p>
+            <ul class="footer-links">
+                <li>
+                    <a href="http://twitter.com/PBDesk" target="_blank" title="Twitter @("PBDesk")">
+                        <span class="icon-stack">
+                            <i class="icon-check-empty icon-stack-base icon-large"></i>
+                            <i class="icon-twitter icon-large"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="muted">·</li>
+                <li>
+                    <a href="http://www.facebook.com/Go.PBDesk" target="_blank" title="Facebook">
+                        <span class="icon-stack">
+                            <i class="icon-check-empty icon-stack-base icon-large"></i>
+                            <i class="icon-facebook icon-large"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="muted">·</li>
+                <li>
+                    <a href="https://plus.google.com/104802217330869674552" target="_blank" title="Google+">
+                        <span class="icon-stack">
+                            <i class="icon-check-empty icon-stack-base icon-large"></i>
+                            <i class="icon-google-plus icon-large"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="muted">·</li>
+                <li>
+                    <a href="http://www.linkedin.com/in/pinalbhatt" target="_blank" title="LinkedIN">
+                        <span class="icon-stack">
+                            <i class="icon-check-empty icon-stack-base icon-large"></i>
+                            <i class="icon-linkedin icon-large"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="muted">·</li>
+                <li>
+                    <a href="https://github.com/pinalbhatt" target="_blank" title="Github">
+                        <span class="icon-stack">
+                            <i class="icon-check-empty icon-stack-base icon-large"></i>
+                            <i class="icon-github icon-large"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/js")    
+    @RenderSection("scripts", required: false)
+</body>
+</html>

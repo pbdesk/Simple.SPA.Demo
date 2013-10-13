@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_LayoutRoot.cshtml";
+}
+@section scripts {
+@Scripts.Render("~/bundles/angular")
+@Scripts.Render("~/bundles/SimpleSPADemoApp")
+}
+<div ng-app="SimpleSPADemoApp">
+    <div ng-view></div>
+</div>
+
