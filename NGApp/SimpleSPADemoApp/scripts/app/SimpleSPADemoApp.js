@@ -5,7 +5,7 @@ var SimpleSPADemoApp = angular.module('SimpleSPADemoApp', ['ngRoute']);
 
 
 SimpleSPADemoApp.config(['$routeProvider', function ($routeProvider) {
-    var simpleSPADemoAppViewsPath = "/NGApp/SimpleSPADemoApp/views/";
+    var simpleSPADemoAppViewsPath = "/Simple.SPA.Demo/NGApp/SimpleSPADemoApp/views/";
     $routeProvider
         .when('/', { controller: CustomersListController, templateUrl: simpleSPADemoAppViewsPath + 'CustomerList.html' })
         .when('/Create', { controller: CustomersCreateController, templateUrl: simpleSPADemoAppViewsPath + 'CustomerCreate.html' })
