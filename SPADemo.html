@@ -1,134 +1,134 @@
-<!doctype html>
-<html lang="en" >
-<head>
-  <meta charset="utf-8">
-  <title>Simple SPA Demo - From the desk of Pinal Bhatt</title>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css"/>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"  />    
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css"  /> 
-  <link rel="stylesheet" href="css/Site.css"/>
-</head>
-<body>
-<header>
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="http://pbdesk.github.io/Simple.SPA.Demo/" class="navbar-brand">PBDesk | Simple SPA Demo</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-          </ul>
-          <ul class="nav navbar-nav navbar-right" style="padding-right:25px">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Websites &nbsp;<b class="icon-hand-down"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a target="_blank" href="http://blog.PBDesk.com/">blog.PBDesk.com <i class="icon-share-alt"></i></a></li>
-                            <li><a target="_blank" href="https://www.PBDesk.com/">www.PBDesk.com <i class="icon-share-alt"></i></a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow Me &nbsp;<b class="icon-hand-down"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">About Me</a></li>
-                            <li class="divider"></li>
-                            <li><a href="http://twitter.com/PBDesk" target="_blank" title="Twitter @("PBDesk")"><i class="icon-twitter icon-large"></i>&nbsp;&nbsp; Twitter </a></li>
-                            <li><a href="http://www.facebook.com/Go.PBDesk" target="_blank" title="Facebook"><i class="icon-facebook icon-large"></i>&nbsp;&nbsp; Facebook</a></li>
-                            <li><a href="https://plus.google.com/104802217330869674552" target="_blank" title="Google+"><i class="icon-google-plus icon-large"></i>&nbsp;&nbsp; Google+ </a></li>
-                            <li><a href="http://www.linkedin.com/in/pinalbhatt" target="_blank" title="LinkedIN"><i class="icon-linkedin icon-large"></i>&nbsp;&nbsp; LinkedIN </a></li>
-                            <li><a href="https://github.com/PBDesk" target="_blank" title="Github"><i class="icon-github icon-large"></i>&nbsp;&nbsp; Github  </a></li>
-                        </ul>
-                    </li>
-                </ul>
-        </div>
-      </div>
-    </div>
-</header>  
-
-<div class="container">
-    <div ng-app="SimpleSPADemoApp">
-        <div ng-view></div>
-    </div>
-</div>
-
-
-  <footer class="footer">
-      <div class="container">
-        <p><b>Simple SPA Demo</b> | From the desk of Pinal Bhatt</p>
-        <p>Concept perceived, designed and developed by <a href="https://plus.google.com/116495447274977757345?rel=author"><b>Pinal Bhatt</b></a>.</p>
-        <p>My Website: <b><a target="_blank" href="http://www.PBDesk.com">PBDesk.com</a> - </b> From the desk of Pinal Bhatt.</p>
-        <p>My Blog: <b><a target="_blank" href="http://blog.PBDesk.com">Pinal Bhatt's Blog</a> - </b> Learning endeavor for ever....</p>        
-        <p>&nbsp;</p>
-        <p>Follow Me At</p>
-        <ul class="footer-links">
-          <li>
-              <a href="http://twitter.com/PBDesk" target="_blank" title="Twitter @PBDesk">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base icon-large"></i>
-                    <i class="icon-twitter icon-large"></i>
-                </span>
-              </a>
-          </li>
-          <li class="muted">·</li>
-          <li>
-              <a href="http://www.facebook.com/Go.PBDesk" target="_blank" title="Facebook">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base icon-large"></i>
-                    <i class="icon-facebook icon-large"></i>
-                </span>
-              </a>
-          </li>
-          <li class="muted">·</li>
-          <li>
-              <a href="https://plus.google.com/104802217330869674552" target="_blank" title="Google+">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base icon-large"></i>
-                    <i class="icon-google-plus icon-large"></i>
-                </span>
-              </a>
-          </li>
-          <li class="muted">·</li>
-          <li>
-              <a href="http://www.linkedin.com/in/pinalbhatt" target="_blank" title="LinkedIN">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base icon-large"></i>
-                    <i class="icon-linkedin icon-large"></i>
-                </span>
-              </a>
-          </li>
-          <li class="muted">·</li>
-          <li>
-              <a href="https://github.com/pinalbhatt" target="_blank" title="Github">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base icon-large"></i>
-                    <i class="icon-github icon-large"></i>
-                </span>
-              </a>
-          </li>
-        </ul>
-      </div>
-  </footer>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-  <script src="/scripts/toastr-custom.js"></script>
-  <script src="/scripts/PBDeskUtils.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-
-  
-  <script src="scripts/app.js"></script>
-
-<script src="/NGApp/SimpleSPADemoApp/scripts/app/SimpleSPADemoApp.js"></script>
-<script src="/NGApp/SimpleSPADemoApp/scripts/services/CustomerFactory.js"></script>
-<script src="/NGApp/SimpleSPADemoApp/scripts/controllers/CustomersListController.js"></script>
-<script src="/NGApp/SimpleSPADemoApp/scripts/controllers/CustomersCreateController.js"></script>
-<script src="/NGApp/SimpleSPADemoApp/scripts/controllers/CustomersEditController.js"></script>
- 
-</body>
-</html>
+<!doctype html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <title>Simple SPA Demo - From the desk of Pinal Bhatt</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"  />    
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css"  /> 
+  <link rel="stylesheet" href="/Simple.SPA.Demo/css/Site.css"/>
+</head>
+<body>
+<header>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://pbdesk.github.io/Simple.SPA.Demo/" class="navbar-brand">PBDesk | Simple SPA Demo</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav navbar-right" style="padding-right:25px">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Websites &nbsp;<b class="icon-hand-down"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" href="http://blog.PBDesk.com/">blog.PBDesk.com <i class="icon-share-alt"></i></a></li>
+                            <li><a target="_blank" href="https://www.PBDesk.com/">www.PBDesk.com <i class="icon-share-alt"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow Me &nbsp;<b class="icon-hand-down"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">About Me</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://twitter.com/PBDesk" target="_blank" title="Twitter @("PBDesk")"><i class="icon-twitter icon-large"></i>&nbsp;&nbsp; Twitter </a></li>
+                            <li><a href="http://www.facebook.com/Go.PBDesk" target="_blank" title="Facebook"><i class="icon-facebook icon-large"></i>&nbsp;&nbsp; Facebook</a></li>
+                            <li><a href="https://plus.google.com/104802217330869674552" target="_blank" title="Google+"><i class="icon-google-plus icon-large"></i>&nbsp;&nbsp; Google+ </a></li>
+                            <li><a href="http://www.linkedin.com/in/pinalbhatt" target="_blank" title="LinkedIN"><i class="icon-linkedin icon-large"></i>&nbsp;&nbsp; LinkedIN </a></li>
+                            <li><a href="https://github.com/PBDesk" target="_blank" title="Github"><i class="icon-github icon-large"></i>&nbsp;&nbsp; Github  </a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+      </div>
+    </div>
+</header>  
+
+<div class="container">
+    <div ng-app="SimpleSPADemoApp">
+        <div ng-view></div>
+    </div>
+</div>
+
+
+  <footer class="footer">
+      <div class="container">
+        <p><b>Simple SPA Demo</b> | From the desk of Pinal Bhatt</p>
+        <p>Concept perceived, designed and developed by <a href="https://plus.google.com/116495447274977757345?rel=author"><b>Pinal Bhatt</b></a>.</p>
+        <p>My Website: <b><a target="_blank" href="http://www.PBDesk.com">PBDesk.com</a> - </b> From the desk of Pinal Bhatt.</p>
+        <p>My Blog: <b><a target="_blank" href="http://blog.PBDesk.com">Pinal Bhatt's Blog</a> - </b> Learning endeavor for ever....</p>        
+        <p>&nbsp;</p>
+        <p>Follow Me At</p>
+        <ul class="footer-links">
+          <li>
+              <a href="http://twitter.com/PBDesk" target="_blank" title="Twitter @PBDesk">
+                <span class="icon-stack">
+                    <i class="icon-check-empty icon-stack-base icon-large"></i>
+                    <i class="icon-twitter icon-large"></i>
+                </span>
+              </a>
+          </li>
+          <li class="muted">·</li>
+          <li>
+              <a href="http://www.facebook.com/Go.PBDesk" target="_blank" title="Facebook">
+                <span class="icon-stack">
+                    <i class="icon-check-empty icon-stack-base icon-large"></i>
+                    <i class="icon-facebook icon-large"></i>
+                </span>
+              </a>
+          </li>
+          <li class="muted">·</li>
+          <li>
+              <a href="https://plus.google.com/104802217330869674552" target="_blank" title="Google+">
+                <span class="icon-stack">
+                    <i class="icon-check-empty icon-stack-base icon-large"></i>
+                    <i class="icon-google-plus icon-large"></i>
+                </span>
+              </a>
+          </li>
+          <li class="muted">·</li>
+          <li>
+              <a href="http://www.linkedin.com/in/pinalbhatt" target="_blank" title="LinkedIN">
+                <span class="icon-stack">
+                    <i class="icon-check-empty icon-stack-base icon-large"></i>
+                    <i class="icon-linkedin icon-large"></i>
+                </span>
+              </a>
+          </li>
+          <li class="muted">·</li>
+          <li>
+              <a href="https://github.com/pinalbhatt" target="_blank" title="Github">
+                <span class="icon-stack">
+                    <i class="icon-check-empty icon-stack-base icon-large"></i>
+                    <i class="icon-github icon-large"></i>
+                </span>
+              </a>
+          </li>
+        </ul>
+      </div>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+  <script src="/Simple.SPA.Demo/scripts/toastr-custom.js"></script>
+  <script src="/Simple.SPA.Demo/scripts/PBDeskUtils.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+  
+  <script src="/Simple.SPA.Demo/scripts/app.js"></script>
+
+<script src="/Simple.SPA.Demo/NGApp/SimpleSPADemoApp/scripts/app/SimpleSPADemoApp.js"></script>
+<script src="/Simple.SPA.Demo/NGApp/SimpleSPADemoApp/scripts/services/CustomerFactory.js"></script>
+<script src="/Simple.SPA.Demo/NGApp/SimpleSPADemoApp/scripts/controllers/CustomersListController.js"></script>
+<script src="/Simple.SPA.Demo/NGApp/SimpleSPADemoApp/scripts/controllers/CustomersCreateController.js"></script>
+<script src="/Simple.SPA.Demo/NGApp/SimpleSPADemoApp/scripts/controllers/CustomersEditController.js"></script>
+ 
+</body>
+</html>
