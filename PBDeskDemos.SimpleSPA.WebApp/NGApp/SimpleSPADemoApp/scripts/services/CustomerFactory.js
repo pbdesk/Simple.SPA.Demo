@@ -6,7 +6,7 @@
     var serviceId = 'CustomerFactory';
     angular.module(SimpleSPADemoAppName).factory(serviceId, ["$http", "$q", CustomerFactory]);
 
-    function CustomerFactory($http, $q, CacheFactory) {
+    function CustomerFactory($http, $q) {
 
         //#region Internal Methods        
 
