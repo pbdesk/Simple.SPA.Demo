@@ -9,6 +9,7 @@
     function CustomerFactory($http, $q) {
 
         $http.defaults.useXDomain = true;
+        delete $http.defaults.headers.common['X-Requested-With'];
         //delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
         //#region Internal Methods        
