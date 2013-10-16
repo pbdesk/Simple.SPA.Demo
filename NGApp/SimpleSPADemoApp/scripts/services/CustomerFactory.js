@@ -4,12 +4,12 @@
     'use strict';
 
     var serviceId = 'CustomerFactory';
-    angular.module(SimpleSPADemoAppName).factory(serviceId, ["$http", "$q", '$httpProvider', CustomerFactory]);
+    angular.module(SimpleSPADemoAppName).factory(serviceId, ["$http", "$q", CustomerFactory]);
 
-    function CustomerFactory($http, $q, $httpProvider) {
+    function CustomerFactory($http, $q) {
 
         $http.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        //delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
         //#region Internal Methods        
 
