@@ -56,7 +56,7 @@ namespace PBDeskDemos.SimpleSPA.DAL
             string strRunSeedData = "false";
             if (ConfigurationManager.AppSettings["EF_RunSeedData"] != null)
             {
-                strRunSeedData = ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"].ToString();
+                strRunSeedData = ConfigurationManager.AppSettings["EF_RunSeedData"].ToString();
             }
             bool.TryParse(strRunSeedData, out boolRunSeedData);
 
