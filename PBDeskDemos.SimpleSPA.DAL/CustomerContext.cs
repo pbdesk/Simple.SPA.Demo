@@ -11,7 +11,7 @@ namespace PBDeskDemos.SimpleSPA.DAL
     public class CustomerContext : DbContext
     {
         public CustomerContext()
-            : base("D02_CustomerConnection")
+            : base("D01_CustomerConnection")
         {
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;

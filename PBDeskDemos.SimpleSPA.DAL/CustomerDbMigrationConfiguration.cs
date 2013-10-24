@@ -6,6 +6,7 @@ using System.Data.Entity.Migrations;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using PBDesk.Utils;
 
 namespace PBDeskDemos.SimpleSPA.DAL
 {
@@ -13,23 +14,27 @@ namespace PBDeskDemos.SimpleSPA.DAL
     {
         public CustomerDbMigrationConfiguration()
         {
-            bool boolAutomaticMigrationDataLossAllowed = false;
-            string strAutomaticMigrationDataLossAllowed = "false";
-            if (ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"] != null)
-            {
-                strAutomaticMigrationDataLossAllowed = ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"].ToString();
-            }
-            bool.TryParse(strAutomaticMigrationDataLossAllowed, out boolAutomaticMigrationDataLossAllowed);
+            
+            bool AutomaticMigrationDataLossAllowed = "EF_AutomaticMigrationDataLossAllowed".AppSetting("false").As<bool>();
+            bool AutomaticMigrationsEnabled = "EF_AutomaticMigrationDataLossAllowed".AppSetting("false").As<bool>();
+            
+            //bool boolAutomaticMigrationDataLossAllowed = false;
+            //string strAutomaticMigrationDataLossAllowed = "false";
+            //if (ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"] != null)
+            //{
+            //    strAutomaticMigrationDataLossAllowed = ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"].ToString();
+            //}
+            //bool.TryParse(strAutomaticMigrationDataLossAllowed, out boolAutomaticMigrationDataLossAllowed);
 
-            bool boolAutomaticMigrationsEnabled = false;
-            string strAutomaticMigrationsEnabled = "false";
-            if (ConfigurationManager.AppSettings["EF_AutomaticMigrationsEnabled"] != null)
-            {
-                strAutomaticMigrationsEnabled = ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"].ToString();
-            }
-            bool.TryParse(strAutomaticMigrationsEnabled, out boolAutomaticMigrationsEnabled);
+            //bool boolAutomaticMigrationsEnabled = false;
+            //string strAutomaticMigrationsEnabled = "false";
+            //if (ConfigurationManager.AppSettings["EF_AutomaticMigrationsEnabled"] != null)
+            //{
+            //    strAutomaticMigrationsEnabled = ConfigurationManager.AppSettings["EF_AutomaticMigrationDataLossAllowed"].ToString();
+            //}
+            //bool.TryParse(strAutomaticMigrationsEnabled, out boolAutomaticMigrationsEnabled);
 
-            if (boolAutomaticMigrationDataLossAllowed)
+            if (AutomaticMigrationDataLossAllowed)
             {
                 this.AutomaticMigrationDataLossAllowed = true; //to be removed later on
             }
@@ -37,7 +42,7 @@ namespace PBDeskDemos.SimpleSPA.DAL
             {
                 this.AutomaticMigrationDataLossAllowed = false;
             }
-            if (boolAutomaticMigrationsEnabled)
+            if (AutomaticMigrationsEnabled)
             {
                 this.AutomaticMigrationsEnabled = true;
             }
@@ -51,14 +56,14 @@ namespace PBDeskDemos.SimpleSPA.DAL
         protected override void Seed(CustomerContext context)
         {
             base.Seed(context);
-
-            bool boolRunSeedData = false;
-            string strRunSeedData = "false";
-            if (ConfigurationManager.AppSettings["EF_RunSeedData"] != null)
-            {
-                strRunSeedData = ConfigurationManager.AppSettings["EF_RunSeedData"].ToString();
-            }
-            bool.TryParse(strRunSeedData, out boolRunSeedData);
+            bool boolRunSeedData = "SimpleSPA_RunSeedData".AppSetting("false").As<bool>();
+            //bool boolRunSeedData = false;
+            //string strRunSeedData = "false";
+            //if (ConfigurationManager.AppSettings["EF_RunSeedData"] != null)
+            //{
+            //    strRunSeedData = ConfigurationManager.AppSettings["EF_RunSeedData"].ToString();
+            //}
+            //bool.TryParse(strRunSeedData, out boolRunSeedData);
 
             if (boolRunSeedData)
             {

@@ -13,7 +13,7 @@ namespace PBDeskDemos.SimpleSPA.DAL
     {
         public CustomerConfiguration()
         {
-            ToTable("D02_Customers");
+            ToTable("D01_Customers");
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnName("Id").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(x => x.FirstName).HasColumnName("FirstName").IsRequired();
